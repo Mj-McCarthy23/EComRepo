@@ -1,0 +1,5 @@
+﻿  main.cpp
+D:\EComRepo\Master\main.cpp(17,20): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\EComRepo\Master\main.cpp(25,20): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\EComRepo\Master\main.cpp(33,21): warning C4305: 'argument': truncation from 'double' to 'float'
+  Master.vcxproj -> D:\EComRepo\Master\x64\Debug\Master.exe
