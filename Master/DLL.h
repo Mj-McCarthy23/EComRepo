@@ -6,17 +6,17 @@ using namespace std;
 
 
 // Node Class Begins
-template < typename T >
+template < typename Tdata >
 class NodeDLL {
 public:
     // Creation of data
-    T data;
+    Tdata data;
     // Creation of pointer to next node
-    NodeDLL < T >* next;
+    NodeDLL < Tdata >* next;
     // Creation of pointer to previous node
-    NodeDLL < T >* prev;
+    NodeDLL < Tdata >* prev;
 
-    NodeDLL(T new_data) {
+    NodeDLL(Tdata* new_data) {
         this->data = new_data;
         next = NULL;
         prev = NULL;
@@ -32,6 +32,9 @@ public:
     // Constructor
     DLL() {
         head_ref = NULL;
+    }
+    DLL(const DLL& p1) {
+        
     }
     // Function to print the DLL elements
     void printDLL() {
@@ -51,7 +54,7 @@ public:
     }
     // Function that inserts data to the begining of the DLL and returns a node
     // The function returns a node to facilitate deleting nodes
-    NodeDLL < T >* pushDLL(T new_data) {
+    NodeDLL < T >* pushDLL(T* new_data) {
         NodeDLL < T >* new_node = new NodeDLL<T>(new_data);
         if (head_ref == NULL) {
             // Make the new node next equal to the head reference
@@ -145,16 +148,17 @@ public:
         }
     }
     // Destructor
-    ~DLL() {
-        NodeDLL < T >* curr = head_ref;
-        NodeDLL < T >* prev = NULL;
-        // Traverse through the DLL
-        while (curr != NULL) {
-            // Update curr and prev
-            prev = curr;
-            curr = curr->next;
-            delete curr;
-        }
-    }
+    //~DLL() {
+    //    NodeDLL < T >* curr = head_ref;
+    //    NodeDLL < T >* prev = NULL;
+    //    // Traverse through the DLL
+    //    while (curr != NULL) {
+    //        // Update curr and prev
+    //        prev = curr;
+    //        curr = curr->next;
+    //        delete curr;
+    //    }
+    //    delete prev;
+    //}
 };
 // Double Linked List Class Ends

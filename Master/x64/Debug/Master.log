@@ -1,5 +1,8 @@
 ﻿  main.cpp
-D:\EComRepo\Master\main.cpp(17,20): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\EComRepo\Master\main.cpp(25,20): warning C4305: 'argument': truncation from 'double' to 'float'
-D:\EComRepo\Master\main.cpp(33,21): warning C4305: 'argument': truncation from 'double' to 'float'
-  Master.vcxproj -> D:\EComRepo\Master\x64\Debug\Master.exe
+D:\EComRepo\Master\main.cpp(24,17): error C2664: 'NodeDLL<T> *DLL<T>::pushDLL(T *)': cannot convert argument 1 from 'Item' to 'T *'
+          with
+          [
+              T=NodeDLL<Item>
+          ]
+D:\EComRepo\Master\main.cpp(24,15): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\EComRepo\Master\DLL.h(57,20): message : see declaration of 'DLL<NodeDLL<Item>>::pushDLL'

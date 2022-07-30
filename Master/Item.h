@@ -15,7 +15,7 @@ private:
     string name;    //item name
     string cat;     // category
     string exp;     // expirey date
-    float price;    // price of item
+    double price;    // price of item
 
 public:
     //Methods to write to private variables
@@ -28,7 +28,7 @@ public:
     void setExpiryDate(string expiry) {
         this->exp = expiry;
     }
-    void setPrice(float price) {
+    void setPrice(double price) {
         this->price = price;
     }
     //Methods to get private variables
@@ -41,7 +41,7 @@ public:
     string getExpiryDate() {
         return exp;
     }
-    float getPrice() {
+    double getPrice() {
         return price;
     }
     //Method to print all the information

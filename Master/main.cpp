@@ -9,7 +9,7 @@
 #include "Item.h"
 #include "DLL.h"
 
-Item* createItem(string name, string cat, string exp, float price) {
+Item* createItem(string name, string cat, string exp, double price) {
     Item* newItem = new Item;
     newItem->setName(name);
     newItem->setCategory(cat);
@@ -19,6 +19,10 @@ Item* createItem(string name, string cat, string exp, float price) {
 }
 
 int main() {
+    Item* x = createItem("orange", "fruits", "9 dec", 1.91);
+    DLL<NodeDLL<Item>> y;
+    y.pushDLL(*x);
+
     //Item x;
     //x.setName("ORANGE");
     //cout << x.getName() << endl;
